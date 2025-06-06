@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تنظیمات</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">تنظیمات</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item active" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="settings-title">تنظیمات</h2>
+      <form class="form">
+        <h4>تنظیمات ظاهری</h4>
+        <label id="settings-fonts-label">فونت‌های سفارشی</label>
+        <input type="file" id="upload-font">
+        <label id="settings-colors-label">پالت رنگی</label>
+        <input type="color" value="#52C41A">
+        <h4>تنظیمات زبان</h4>
+        <label id="settings-language-label">زبان پیش‌فرض</label>
+        <select>
+          <option value="fa">فارسی</option>
+          <option value="en">English</option>
+        </select>
+        <h4>تنظیمات اعلان‌ها</h4>
+        <label id="settings-email-notifications-label">اعلان‌های ایمیل</label>
+        <input type="checkbox" checked> فعال
+        <label id="settings-campaign-notifications-label">اعلان‌های کمپین</label>
+        <input type="checkbox"> فعال
+        <h4>تنظیمات API</h4>
+        <label id="settings-api-key-label">کلید API پیش‌فرض</label>
+        <input type="text" placeholder="کلید API خود را وارد کنید">
+        <button class="btn-primary" id="save-btn" type="button" onclick="alert('ذخیره شد')">ذخیره</button>
+      </form>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

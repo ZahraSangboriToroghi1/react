@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصال ایمیل</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">اتصال ایمیل</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item active" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="integrations-title">اتصال ایمیل</h2>
+      <div class="integrations">
+        <div class="card">
+          <h3>Mailchimp</h3>
+          <p id="integrations-desc">اتصال به سرویس‌های ایمیل</p>
+          <input type="text" placeholder="Enter API Key">
+          <button class="btn-primary" onclick="alert('Connected to Mailchimp')">اتصال</button>
+          <p>Status: Disconnected</p>
+          <p>ویژگی‌ها: ارسال انبوه، گزارش پیشرفته</p>
+        </div>
+        <div class="card">
+          <h3>SendGrid</h3>
+          <p id="integrations-desc">اتصال به سرویس‌های ایمیل</p>
+          <input type="text" placeholder="Enter API Key">
+          <button class="btn-primary" onclick="alert('Connected to SendGrid')">اتصال</button>
+          <p>Status: Disconnected</p>
+          <p>ویژگی‌ها: ایمیل تراکنشی، تحلیل رفتار</p>
+        </div>
+        <div class="card">
+          <h3>HubSpot</h3>
+          <p id="integrations-desc">اتصال به سرویس‌های ایمیل</p>
+          <input type="text" placeholder="Enter API Key">
+          <button class="btn-primary" onclick="alert('Connected to HubSpot')">اتصال</button>
+          <p>Status: Disconnected</p>
+          <p>ویژگی‌ها: CRM یکپارچه، اتوماسیون</p>
+        </div>
+        <div class="card">
+          <h3>Constant Contact</h3>
+          <p id="integrations-desc">اتصال به سرویس‌های ایمیل</p>
+          <input type="text" placeholder="Enter API Key">
+          <button class="btn-primary" onclick="alert('Connected to Constant Contact')">اتصال</button>
+          <p>Status: Disconnected</p>
+          <p>ویژگی‌ها: کمپین‌های هدفمند، ردیابی</p>
+        </div>
+        <div class="card">
+          <h3>ActiveCampaign</h3>
+          <p id="integrations-desc">اتصال به سرویس‌های ایمیل</p>
+          <input type="text" placeholder="Enter API Key">
+          <button class="btn-primary" onclick="alert('Connected to ActiveCampaign')">اتصال</button>
+          <p>Status: Disconnected</p>
+          <p>ویژگی‌ها: اتوماسیون پیشرفته، CRM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

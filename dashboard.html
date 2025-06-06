@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">داشبورد</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item active" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="dashboard-title">داشبورد</h2>
+      <div class="notifications">
+        <div class="card notification">
+          <p>کمپین جدید شما آماده است! <a href="editor.html" class="link">مشاهده</a></p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="card">
+          <p id="stats-templates">تعداد تمپلیت‌ها: 10</p>
+        </div>
+        <div class="card">
+          <p id="stats-emails">ایمیل‌های ارسالی: 150</p>
+        </div>
+        <div class="card">
+          <p id="stats-open-rate">نرخ باز شدن: 65%</p>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="card chart">
+          <h4>نرخ باز شدن ایمیل‌ها (ماهانه)</h4>
+          <div class="chart-placeholder">نمودار نمایشی</div>
+        </div>
+        <div class="card chart">
+          <h4>نرخ کلیک (ماهانه)</h4>
+          <div class="chart-placeholder">نمودار نمایشی</div>
+        </div>
+      </div>
+      <div class="shortcuts">
+        <button class="btn-primary" id="create-template-btn" onclick="window.location.href='editor.html'">ایجاد قالب جدید</button>
+        <button class="btn-secondary" id="view-gallery-btn" onclick="window.location.href='gallery.html'">مشاهده گالری</button>
+        <button class="btn-secondary" id="connect-service-btn" onclick="window.location.href='integrations.html'">اتصال سرویس جدید</button>
+      </div>
+      <h4 id="recent-activity-title">فعالیت‌های اخیر</h4>
+      <div class="recent">
+        <div class="card">
+          <p>Sales Email - 2025-06-01</p>
+          <p>نرخ باز شدن: 70%</p>
+          <a href="editor.html" class="link">ویرایش</a>
+        </div>
+        <div class="card">
+          <p>Welcome Email - 2025-06-02</p>
+          <p>نرخ باز شدن: 60%</p>
+          <a href="editor.html" class="link">ویرایش</a>
+        </div>
+        <div class="card">
+          <p>Newsletter - 2025-06-03</p>
+          <p>نرخ باز شدن: 55%</p>
+          <a href="editor.html" class="link">ویرایش</a>
+        </div>
+      </div>
+      <h4 id="campaign-reports-title">گزارش کمپین‌ها</h4>
+      <div class="campaign-reports">
+        <div class="card">
+          <p>کمپین تابستانه</p>
+          <p>ارسال شده: 1000 ایمیل</p>
+          <p>نرخ باز شدن: 62%</p>
+          <p>نرخ کلیک: 15%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

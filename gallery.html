@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>گالری تمپلیت‌ها</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">گالری تمپلیت‌ها</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item active" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="gallery-title">گالری تمپلیت‌ها</h2>
+      <div class="filters">
+        <input type="text" id="search-template" placeholder="جستجوی تمپلیت..." onkeyup="filterTemplates()">
+        <select id="category-filter" onchange="filterTemplates()">
+          <option value="all">همه</option>
+          <option value="promotional">Promotional</option>
+          <option value="onboarding">Onboarding</option>
+          <option value="newsletter">Newsletter</option>
+          <option value="event">Event</option>
+          <option value="transactional">Transactional</option>
+        </select>
+        <select id="sort-filter" onchange="filterTemplates()">
+          <option value="newest">جدیدترین</option>
+          <option value="popular">محبوب</option>
+          <option value="alphabetical">الفبایی</option>
+        </select>
+      </div>
+      <div class="gallery">
+        <div class="card">
+          <h4>Sales Email</h4>
+          <p>Promotional email template</p>
+          <button class="btn-preview" onclick="showPreviewModal('Sales Email', 'This is a promotional template for sales campaigns.')">پیش‌نمایش</button>
+          <button class="btn-secondary" id="select-template-btn" onclick="window.location.href='editor.html'">انتخاب تمپلیت</button>
+        </div>
+        <div class="card">
+          <h4>Welcome Email</h4>
+          <p>Onboarding email template</p>
+          <button class="btn-preview" onclick="showPreviewModal('Welcome Email', 'This is an onboarding template for new users.')">پیش‌نمایش</button>
+          <button class="btn-secondary" id="select-template-btn" onclick="window.location.href='editor.html'">انتخاب تمپلیت</button>
+        </div>
+        <div class="card">
+          <h4>Newsletter</h4>
+          <p>Monthly update template</p>
+          <button class="btn-preview" onclick="showPreviewModal('Newsletter', 'This is a monthly newsletter template.')">پیش‌نمایش</button>
+          <button class="btn-secondary" id="select-template-btn" onclick="window.location.href='editor.html'">انتخاب تمپلیت</button>
+        </div>
+        <div class="card">
+          <h4>Event Invite</h4>
+          <p>Event invitation template</p>
+          <button class="btn-preview" onclick="showPreviewModal('Event Invite', 'This is an event invitation template.')">پیش‌نمایش</button>
+          <button class="btn-secondary" id="select-template-btn" onclick="window.location.href='editor.html'">انتخاب تمپلیت</button>
+        </div>
+      </div>
+      <div id="preview-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closePreviewModal()">×</span>
+          <h3 id="preview-modal-title"></h3>
+          <div id="preview-modal-body"></div>
+          <button class="btn-secondary" onclick="window.location.href='editor.html'">انتخاب و ویرایش</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

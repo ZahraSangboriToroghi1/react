@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود/ثبت‌نام</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Waypoint Dashboard</h2>
+    <div class="language-switcher">
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="form-card">
+      <div class="tabs">
+        <button class="tab-button active" onclick="showTab('login')">ورود</button>
+        <button class="tab-button" onclick="showTab('signup')">ثبت‌نام</button>
+      </div>
+      <div id="login" class="tab-content active">
+        <form>
+          <input type="email" placeholder="ایمیل" required>
+          <input type="password" placeholder="رمز عبور" required>
+          <button type="submit" class="btn-primary" onclick="window.location.href='dashboard.html'; return false;">ورود</button>
+          <a href="#" class="link">فراموشی رمز عبور؟</a>
+          <div class="sso-buttons">
+            <button type="button" class="btn-sso" onclick="alert('Google SSO')">Google SSO</button>
+            <button type="button" class="btn-sso" onclick="alert('GitHub SSO')">GitHub SSO</button>
+          </div>
+        </form>
+      </div>
+      <div id="signup" class="tab-content">
+        <form>
+          <input type="text" placeholder="نام" required>
+          <input type="email" placeholder="ایمیل" required>
+          <input type="password" placeholder="رمز عبور" required>
+          <input type="password" placeholder="تأیید رمز عبور" required>
+          <button type="submit" class="btn-primary" onclick="window.location.href='dashboard.html'; return false;">ثبت‌نام</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پروفایل</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">پروفایل</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="profile-title">پروفایل</h2>
+      <div class="card">
+        <form>
+          <label>نام</label>
+          <input type="text" value="John Doe">
+          <label>ایمیل</label>
+          <input type="email" value="john@example.com" disabled>
+          <label>تغییر رمز عبور</label>
+          <input type="password" placeholder="رمز عبور جدید">
+          <input type="password" placeholder="تأیید رمز عبور جدید">
+          <label>تصویر پروفایل</label>
+          <input type="file">
+          <h4>اتصال به شبکه‌های اجتماعی</h4>
+          <button class="btn-sso" onclick="alert('Connected to LinkedIn')">LinkedIn</button>
+          <button class="btn-sso" onclick="alert('Connected to Twitter')">Twitter</button>
+          <button class="btn-primary" type="button" onclick="alert('ذخیره شد')">ویرایش پروفایل</button>
+        </form>
+      </div>
+      <h4 id="recent-activity-title">فعالیت‌های اخیر</h4>
+      <div class="card">
+        <p>ایجاد تمپلیت - 2025-06-02</p>
+      </div>
+      <div class="card">
+        <p>ارسال ایمیل - 2025-06-03</p>
+      </div>
+      <div class="card">
+        <p>به‌روزرسانی پروفایل - 2025-06-04</p>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طراحی قالب</title>
+  <link rel="stylesheet" href="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="page-title">طراحی قالب</h1>
+    <div class="header-menu">
+      <button class="header-menu-toggle" onclick="toggleHeaderMenu()">▼</button>
+      <div class="header-menu-content" id="header-menu-content">
+        <a href="dashboard.html" class="header-menu-item" onclick="updatePageTitle()">داشبورد</a>
+        <a href="editor.html" class="header-menu-item" onclick="updatePageTitle()">طراحی قالب</a>
+        <a href="gallery.html" class="header-menu-item" onclick="updatePageTitle()">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="header-menu-item" onclick="updatePageTitle()">اتصال ایمیل</a>
+        <a href="settings.html" class="header-menu-item" onclick="updatePageTitle()">تنظیمات</a>
+      </div>
+    </div>
+    <div>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <a href="profile.html" class="header-link" id="profile-link">پروفایل</a>
+      <a href="login.html" class="header-link" id="logout-link">خروج</a>
+    </div>
+  </header>
+  <div class="app">
+    <div class="sider" id="sidebar">
+      <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+      <div class="menu">
+        <a href="dashboard.html" class="menu-item" id="dashboard-menu">داشبورد</a>
+        <a href="editor.html" class="menu-item active" id="editor-menu">طراحی قالب</a>
+        <a href="gallery.html" class="menu-item" id="gallery-menu">گالری تمپلیت‌ها</a>
+        <a href="integrations.html" class="menu-item" id="integrations-menu">اتصال ایمیل</a>
+        <a href="settings.html" class="menu-item" id="settings-menu">تنظیمات</a>
+      </div>
+    </div>
+    <div class="content">
+      <h2 id="editor-title">طراحی قالب</h2>
+      <div class="ai-tools">
+        <button class="btn-primary" id="generate-template-btn" onclick="showAIGenerateModal()">تولید قالب هوشمند</button>
+        <button class="btn-secondary" id="suggest-content-btn" onclick="showAIContentModal()">پیشنهاد محتوا</button>
+        <button class="btn-secondary" id="spam-analysis-btn" onclick="showAISpamAnalysisModal()">تحلیل اسپم</button>
+        <button class="btn-secondary" id="image-edit-btn" onclick="showAIImageEditModal()">ویرایش تصویر پیشرفته</button>
+        <button class="btn-secondary" id="branding-btn" onclick="showAIBrandingModal()">برندینگ هوشمند</button>
+      </div>
+      <div class="editor">
+        <div class="elements-sidebar">
+          <h3 id="elements-title">المان‌ها</h3>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="text-element">متن</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="button-element">دکمه</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="image-element">تصویر</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="table-element">جدول</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="social-element">آیکون شبکه‌های اجتماعی</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="divider-element">خط جداکننده</div>
+          <div class="element" draggable="true" ondragstart="drag(event)" id="video-element">ویدئو</div>
+        </div>
+        <div class="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p id="drag-here">المان‌ها را اینجا بکشید</p>
+          <div id="canvas-content"></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-primary" id="save-btn" onclick="showModal('ذخیره', 'ذخیره شد')">ذخیره</button>
+        <button class="btn-secondary" id="export-html-btn" onclick="showModal('Export HTML', '<div><p>Sample HTML</p></div>')">Export HTML</button>
+        <select id="preview-mode" onchange="updatePreview()">
+          <option value="desktop">Desktop</option>
+          <option value="tablet">Tablet</option>
+          <option value="mobile">Mobile</option>
+        </select>
+        <button class="btn-secondary" id="multi-preview-btn" onclick="showMultiPreviewModal()">پیش‌نمایش چندگانه</button>
+      </div>
+      <div class="preview" id="preview-section">
+        <h4 id="preview-title">پیش‌نمایش</h4>
+        <div id="preview-content"></div>
+      </div>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">×</span>
+          <h3 id="modal-title"></h3>
+          <div id="modal-body"></div>
+          <input type="text" id="modal-input" style="display: none;">
+          <div id="modal-options" style="display: none;"></div>
+          <button class="btn-primary" onclick="handleModalAction()">تأیید</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="C:/Users/zahra/startup/my-waypoint-dashboard-static/assets/js/script.js"></script>
+</body>
+</html>
